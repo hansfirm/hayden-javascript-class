@@ -61,6 +61,42 @@
     let myName = makeName('Hayden', 'Hans', 'Baggett')
     console.log(myName.toUpperCase())
 
+    // Make a name with middle initial
+  function makeBetterName(firstName, middleName, lastName) {
+    if (middleName.length === 1) {
+      middleName = middleName + ".";
+      let fullName = firstName + " " + middleName + " " + lastName;
+    return fullName} 
+    else {
+      let fullName = firstName + " " + middleName + " " + lastName;
+    return fullName;
+    }
+  }
+  console.log(makeBetterName("Joan", "Marie", "Larkin"));
+console.log(makeBetterName("John", "F", "Kennedy"));
+
+//Baseball game outcome
+function outcome(homeScore, awayScore) {
+  if (homeScore > awayScore) {
+    let outcome = 'The home team won. ' + '(' + homeScore + ', ' + awayScore + ')';
+    console.log(outcome);
+  }
+  else if (homeScore===awayScore) {
+    let outcome = 'The game ended in a draw. '  + '(' + awayScore + ', ' + homeScore + ')';
+    console.log(outcome);
+  }
+  else {
+    let outcome = 'The away team won. ' + '(' + awayScore + ', ' + homeScore + ')';
+    console.log(outcome);
+  }
+}
+outcome(5,4)
+outcome(4,5)
+outcome(5,5)
+outcome(39,2)
+outcome(2,11)
+outcome(1,1)
+
     </script>
 </body>
 </html>
